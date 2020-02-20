@@ -20,8 +20,6 @@ let oscore = 0;
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 const squares = Array.from(document.querySelectorAll("#board div"));
 const message = document.querySelector("h2");
-const x = document.getElementById("x-score");
-const o = document.getElementById("o-score");
 
 ///////////////////// EVENT LISTENERS ///////////////////////////////
 window.onload = init;
@@ -42,8 +40,6 @@ function init() {
   win = null;
 
   render();
-  document.getElementById("x-button").style.visibility = "visible";
-  document.getElementById("o-button").style.visibility = "visible";
 }
 
 function render() {

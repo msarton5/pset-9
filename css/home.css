@@ -35,22 +35,20 @@ h2 {
 .wrap {
   flex-wrap: wrap;
   height: 456px;
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 456px;
 }
 
 .square {
   border: 1px solid rgba(0, 0, 0, 0.75);
   font-size: 96px;
-  height: 100px;
+  height: 150px;
   line-height: 150px;
   user-select: none;
-  width: 100px;
+  width: 150px;
 }
 
 .square:hover {
-    background-image: url("https://cdn140.picsart.com/283461519041211.png?type=webp&to=min&r=1024");
+  background-image: url("https://vignette.wikia.nocookie.net/2007scape/images/f/fd/Giant_Mole.png/revision/latest?cb=20160715144326");
   background-color: yellow;
    background-size: cover;
   cursor: pointer;
