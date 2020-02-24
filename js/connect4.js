@@ -12,10 +12,10 @@ const winningConditions = [
 
 ///////////////////// APP STATE (VARIABLES) /////////////////////////
 let board;
-let turn = "X";
+let turn = "red";
 let win;
-let xscore = 0;
-let oscore = 0;
+let redscore = 0;
+let yellowscore = 0;
 
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 const squares = Array.from(document.querySelectorAll("#board div"));
@@ -36,7 +36,7 @@ function init() {
     "", "", "", "", "", "", "",
     "", "", "", "", "", "", "",
   ];
-  turn = "X";
+  turn = "red";
   win = null;
 
   render();
@@ -56,7 +56,7 @@ function takeTurn(e) {
     return square === e.target;
   });
   board[index] = turn;
-  turn = turn === "X" ? "O" : "X";
+  turn = turn === "red" ? "yellow" : "red";
 
   render();
 }
@@ -85,7 +85,7 @@ function takeTurn(e) {
 
     if (board[index] === "") {
       board[index] = turn;
-      turn = turn === "X" ? "O" : "X";
+      turn = turn === "red" ? "yellow" : "red";
       win = getWinner();
 
       render();
@@ -115,28 +115,28 @@ function getWinner() {
 
 function keepScore(win) {
   if (win !== null) {
-    if (win === "X") {
-      xscore++;
-      x.textContent = "X: " + xscore;
+    if (win === "red") {
+      redscore++;
+      red.textContent = "red: " + redscore;
 
-    } else if (win === "O") {
-        oscore++;
-      o.textContent = "O: " + oscore;
+    } else if (win === "yellow") {
+      yellowscore++;
+      yellow.textContent = "yellow: " + yellowscore;
 
     }
   }
 }
 
-function xFirst() {
-    turn = "X";
-    document.getElementById("x-button").style.visibility = "invisible";
-    document.getElementById("o-button").style.visibility = "invisible";
+function redFirst() {
+    turn = "red";
+    document.getElementById("red-button").style.visibility = "invisible";
+    document.getElementById("yellow-button").style.visibility = "invisible";
     render();
 }
 
-function oFirst() {
-  turn = "O";
-  document.getElementById("x-button").style.visibility = "invisible";
-  document.getElementById("o-button").style.visibility = "invisible";
+function yellowFirst() {
+  turn = "yellow";
+  document.getElementById("red-button").style.visibility = "invisible";
+  document.getElementById("yellow-button").style.visibility = "invisible";
   render();
 }
