@@ -58,6 +58,10 @@ function takeTurn(e) {
   board[index] = turn;
   turn = turn === "red" ? "yellow" : "red";
 
+  if (turn === "red"){
+      square.style.color = "red";
+  }
+
   render();
 }
 
