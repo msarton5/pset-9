@@ -74,7 +74,7 @@ const message = document.querySelector("h2");
 ///////////////////// EVENT LISTENERS ///////////////////////////////
 window.onload = init;
 document.getElementById("board").onclick = takeTurn;
-document.getElementById("reset-button").onclick = init;
+// document.getElementById("reset-button").onclick = init;
 
 ///////////////////// FUNCTIONS /////////////////////////////////////
 function init() {
@@ -173,11 +173,11 @@ function keepScore(win) {
   if (win !== null) {
     if (win === "red") {
       redscore++;
-      red.textContent = "red: " + redscore;
+      redscore.textContent = "red: " + redscore;
 
     } else if (win === "yellow") {
       yellowscore++;
-      yellow.textContent = "yellow: " + yellowscore;
+      yellowscore.textContent = "yellow: " + yellowscore;
 
     }
   }
