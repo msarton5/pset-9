@@ -50,8 +50,7 @@ h2 {
 }
 
 .square:hover {
-    background-image: url("https://cdn140.picsart.com/283461519041211.png?type=webp&to=min&r=1024");
-  background-color: yellow;
+  background-color: white;
    background-size: cover;
   cursor: pointer;
 }

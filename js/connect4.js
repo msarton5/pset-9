@@ -109,7 +109,8 @@ function takeTurn(e) {
   turn = turn === "red" ? "yellow" : "red";
 
   if (turn === "red"){
-      board.body.style.background = "red";
+    ctx.beginPath();
+    ctx.arc(10, 10, radius , 0 , Math.PI * 2);
   } else if (turn === "yellow") {
       board.body.style.background = "yellow";
   }
@@ -124,7 +125,8 @@ function getWinner() {
     if (
       board[condition[0]] &&
       board[condition[0]] === board[condition[1]] &&
-      board[conition[1]] === board[condition[2]]
+      board[condition[1]] === board[condition[2]] &&
+      board[condition[2]] === board[condition[3]]
     ) {
       winner = board[condition[0]];
     }
@@ -184,14 +186,14 @@ function keepScore(win) {
 }
 
 function redFirst() {
-    turn = "red";
+    turn === "red";
     document.getElementById("red-button").style.visibility = "invisible";
     document.getElementById("yellow-button").style.visibility = "invisible";
     render();
 }
 
 function yellowFirst() {
-  turn = "yellow";
+  turn === "yellow";
   document.getElementById("red-button").style.visibility = "invisible";
   document.getElementById("yellow-button").style.visibility = "invisible";
   render();
