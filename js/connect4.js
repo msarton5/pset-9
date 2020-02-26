@@ -101,23 +101,6 @@ function render() {
     win === "T" ? "It's a tie!" : win ? `${win} wins!` : `Turn: ${turn}`;
 }
 
-function takeTurn(e) {
-  let index = squares.findIndex(function(square) {
-    return square === e.target;
-  });
-  board[index] = turn;
-  turn = turn === "red" ? "yellow" : "red";
-
-  if (turn === "red"){
-    ctx.beginPath();
-    ctx.arc(10, 10, radius , 0 , Math.PI * 2);
-  } else if (turn === "yellow") {
-      board.body.style.background = "yellow";
-  }
-
-  render();
-}
-
 function getWinner() {
   let winner = null;
 
@@ -151,24 +134,6 @@ function takeTurn(e) {
   }
   win = getWinner();
   keepScore(win);
-}
-
-function getWinner() {
-  let winner = null;
-
-  winningConditions.forEach(function(condition, index) {
-    if (
-      board[condition[0]] &&
-      board[condition[0]] === board[condition[1]] &&
-      board[condition[1]] === board[condition[2]]
-    ) {
-      winner = board[condition[0]];
-
-    }
-  }
-);
-
-  return winner ? winner : board.includes("") ? null : "T";
 }
 
 function keepScore(win) {
