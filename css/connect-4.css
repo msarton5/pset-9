@@ -1,6 +1,11 @@
 body {
   text-align: center;
-  background: #639E8A;
+  background: #0775A4;
+  /* #788888 = grey
+  #6A6332 = awful green
+  #89E448 = nauseating green
+  #FE777E = bright pink
+  -webkit-linear-gradient(#6A6332, #FE777E)*/
   font-family: "Roboto", monospace;
 }
 
@@ -51,7 +56,7 @@ h2 {
 
 .square:hover {
   background-color: white;
-   background-size: cover;
+  background-size: cover;
   cursor: pointer;
 }
 
