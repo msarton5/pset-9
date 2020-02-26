@@ -94,9 +94,15 @@ function init() {
 
 function render() {
   board.forEach(function(mark, index) {
-    squares[index].textContent = mark;
+    let canvas = document.getElementById("board[index]");
+    let ctx = canvas.getContext("2d");
+    switch (mark) {
+      case "":
+        ctx.beginPath();
+        ctx.arc(20*index%7, 20*((index/6)-index%6), 15, 0, 2 * Math.PI);
+        ctx.stroke();
+    }
   });
-
   message.textContent =
     win === "T" ? "It's a tie!" : win ? `${win} wins!` : `Turn: ${turn}`;
 }
@@ -128,6 +134,14 @@ function takeTurn(e) {
       board[index] = turn;
       turn = turn === "red" ? "yellow" : "red";
       win = getWinner();
+
+      let canvas = document.getElementById("board[index]");
+      let ctx = canvas.getContext("2d");
+
+      ctx.beginPath();
+       ctx.arc(20*index%7, 20*((index/6)-index%6), 15, 0, 2 * Math.PI);
+       ctx.fillStyle = "red";
+       ctx.fill();
 
       render();
     }
