@@ -61,6 +61,17 @@ const winningConditions = [
 ];
 
 ///////////////////// APP STATE (VARIABLES) /////////////////////////
+
+let columns = [
+  [null, null, null, null, null, null],
+  [null, null, null, null, null, null],
+  [null, null, null, null, null, null],
+  [null, null, null, null, null, null],
+  [null, null, null, null, null, null],
+  [null, null, null, null, null, null],
+  [null, null, null, null, null, null]
+]
+
 let board;
 let turn = "red";
 let win;
@@ -75,6 +86,13 @@ const message = document.querySelector("h2");
 window.onload = init;
 document.getElementById("board").onclick = takeTurn;
 // document.getElementById("reset-button").onclick = init;
+document.getElementById("button1").onclick = takeTurn;
+document.getElementById("button2").onclick = takeTurn;
+document.getElementById("button3").onclick = takeTurn;
+document.getElementById("button4").onclick = takeTurn;
+document.getElementById("button5").onclick = takeTurn;
+document.getElementById("button6").onclick = takeTurn;
+document.getElementById("button7").onclick = takeTurn;
 
 ///////////////////// FUNCTIONS /////////////////////////////////////
 function init() {
@@ -94,14 +112,25 @@ function init() {
 
 function render() {
   board.forEach(function(mark, index) {
-    let canvas = document.getElementById("board[index]");
-    let ctx = canvas.getContext("2d");
-    switch (mark) {
-      case "":
-        ctx.beginPath();
-        ctx.arc(20*index%7, 20*((index/6)-index%6), 15, 0, 2 * Math.PI);
-        ctx.stroke();
+    console.log(turn);
+    document.getElementsByClassName("square") = box;
+    console.log(box);
+    if (turn === "red") {
+      box.style.backgroundColor = "red";
+    } else {
+      box.style.backgroundColor = "yellow";
     }
+
+
+    // const canvas = document.getElementById("board[index]");
+    // const ctx = canvas.getContext("2d");
+    //
+    // if (turn === "red") {
+    //     ctx.beginPath();
+    //     ctx.arc(20*index%7, 20*((index/6)-index%6), 15, 0, 2 * Math.PI);
+    //     ctx.fill();
+    // }
+
   });
   message.textContent =
     win === "T" ? "It's a tie!" : win ? `${win} wins!` : `Turn: ${turn}`;
@@ -126,6 +155,7 @@ function getWinner() {
 
 function takeTurn(e) {
   if (!win) {
+    console.log("turn");
     let index = squares.findIndex(function(square) {
       return square === e.target;
     });
@@ -134,14 +164,6 @@ function takeTurn(e) {
       board[index] = turn;
       turn = turn === "red" ? "yellow" : "red";
       win = getWinner();
-
-      let canvas = document.getElementById("board[index]");
-      let ctx = canvas.getContext("2d");
-
-      ctx.beginPath();
-       ctx.arc(20*index%7, 20*((index/6)-index%6), 15, 0, 2 * Math.PI);
-       ctx.fillStyle = "red";
-       ctx.fill();
 
       render();
     }

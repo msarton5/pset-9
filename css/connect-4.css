@@ -55,7 +55,7 @@ h2 {
 }
 
 .square:hover {
-  background-color: white;
+  background-image: url("../images/reddisc.jpg");
   background-size: cover;
   cursor: pointer;
 }
@@ -85,4 +85,8 @@ h2 {
 #container-wrap {
   margin-left: 15%;
   font-size: 21px;
+}
+
+.drop-button {
+  font-size: 33px;
 }
