@@ -67,6 +67,17 @@ const winningConditions = [
   [0,8,16,24],
   [8,16,24,32],
   [16,24,32,40],
+// fourth diagonal
+  [1,9,17,25],
+  [9,17,25,33],
+  [17,25,33,41],
+// fifth diagonal
+  [2,10,18,26],
+  [10,18,26,34],
+// rightmost diagonal
+  [3,11,19,27],
+// leftmost diagonal (right to left)
+  [],
 ];
 
 ///////////////////// APP STATE (VARIABLES) /////////////////////////
