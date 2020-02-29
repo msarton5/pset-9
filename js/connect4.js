@@ -98,15 +98,15 @@ const winningConditions = [
 
 ///////////////////// APP STATE (VARIABLES) /////////////////////////
 
-let columns = [
-  [null, null, null, null, null, null],
-  [null, null, null, null, null, null],
-  [null, null, null, null, null, null],
-  [null, null, null, null, null, null],
-  [null, null, null, null, null, null],
-  [null, null, null, null, null, null],
-  [null, null, null, null, null, null]
-]
+// let columns = [
+//   [null, null, null, null, null, null],
+//   [null, null, null, null, null, null],
+//   [null, null, null, null, null, null],
+//   [null, null, null, null, null, null],
+//   [null, null, null, null, null, null],
+//   [null, null, null, null, null, null],
+//   [null, null, null, null, null, null]
+// ]
 
 let board;
 let turn = "red";
@@ -189,7 +189,7 @@ function getWinner() {
       board[condition[0]] &&
       board[condition[0]] === board[condition[1]] &&
       board[condition[1]] === board[condition[2]] &&
-      board[condition[2]] === board[condition[3]]
+      board[condition[2]] === board[condition[3]] 
     ) {
       winner = board[condition[0]];
     }
