@@ -58,6 +58,15 @@ const winningConditions = [
   [6,13,20,27],
   [13,20,27,34],
   [20,27,34,41]
+// leftmost diagonal (left to right)
+  [14,22,30,38],
+// second diagonal
+  [7,15,23,31],
+  [15,23,31,39],
+// third diagonal
+  [0,8,16,24],
+  [8,16,24,32],
+  [16,24,32,40],
 ];
 
 ///////////////////// APP STATE (VARIABLES) /////////////////////////
@@ -112,29 +121,38 @@ function init() {
 
 function render() {
   board.forEach(function(mark, index) {
-    console.log(turn);
-    document.getElementsByClassName("square") = box;
-    console.log(box);
-    if (turn === "red") {
-      box.style.backgroundColor = "red";
-    } else {
-      box.style.backgroundColor = "yellow";
-    }
-
-
-    // const canvas = document.getElementById("board[index]");
-    // const ctx = canvas.getContext("2d");
-    //
-    // if (turn === "red") {
-    //     ctx.beginPath();
-    //     ctx.arc(20*index%7, 20*((index/6)-index%6), 15, 0, 2 * Math.PI);
-    //     ctx.fill();
-    // }
-
+    squares[index].textContent = mark;
   });
+
   message.textContent =
     win === "T" ? "It's a tie!" : win ? `${win} wins!` : `Turn: ${turn}`;
 }
+
+// function render() {
+//   board.forEach(function(mark, index) {
+//     console.log(turn);
+//     document.getElementsByClassName("square") = box;
+//     console.log(box);
+//     if (turn === "red") {
+//       box.style.backgroundColor = "red";
+//     } else {
+//       box.style.backgroundColor = "yellow";
+//     }
+//
+//
+//     // const canvas = document.getElementById("board[index]");
+//     // const ctx = canvas.getContext("2d");
+//     //
+//     // if (turn === "red") {
+//     //     ctx.beginPath();
+//     //     ctx.arc(20*index%7, 20*((index/6)-index%6), 15, 0, 2 * Math.PI);
+//     //     ctx.fill();
+//     // }
+//
+//   });
+//   message.textContent =
+//     win === "T" ? "It's a tie!" : win ? `${win} wins!` : `Turn: ${turn}`;
+// }
 
 function getWinner() {
   let winner = null;
