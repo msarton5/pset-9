@@ -57,7 +57,7 @@ const winningConditions = [
 // seventh column
   [6,13,20,27],
   [13,20,27,34],
-  [20,27,34,41]
+  [20,27,34,41],
 // leftmost diagonal (left to right)
   [14,22,30,38],
 // second diagonal
@@ -175,6 +175,7 @@ function getWinner() {
   let winner = null;
 
   winningConditions.forEach(function(condition, index) {
+    console.log(condition);
     if (
       board[condition[0]] &&
       board[condition[0]] === board[condition[1]] &&
