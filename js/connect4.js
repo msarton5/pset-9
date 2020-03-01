@@ -395,7 +395,33 @@ function takeTurn5() {
 }
 
 function takeTurn6() {
-
+  if (!win) {
+    if (board[40] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[33] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[26] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[19] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[12] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[5] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    }
+  }
 }
 
 function takeTurn7() {
