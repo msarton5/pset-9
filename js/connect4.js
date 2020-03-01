@@ -365,7 +365,33 @@ function takeTurn4() {
 }
 
 function takeTurn5() {
-
+  if (!win) {
+    if (board[39] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[32] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[25] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[18] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[11] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[4] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    }
+  }
 }
 
 function takeTurn6() {
