@@ -1,0 +1,93 @@
+body {
+  text-align: center;
+  background: #0775A4;
+  /* #788888 = grey
+  #6A6332 = awful green
+  #89E448 = nauseating green
+  #FE777E = bright pink
+  -webkit-linear-gradient(#6A6332, #FE777E)*/
+  font-family: "Roboto", monospace;
+}
+
+h1 {
+  margin: 0 auto;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 48px;
+  margin: 2%;
+    text-decoration-color: orange;
+}
+
+h2 {
+  font-size: 20px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-weight: lighter;
+  margin: 2%;
+    text-decoration-color: orange;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
+  height: 456px;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.square {
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  font-size: 30px;
+  height: 100px;
+  line-height: 150px;
+  user-select: none;
+  width: 100px;
+}
+
+.square:hover {
+  /* background-image: url("../images/reddisc.jpg"); */
+  background-color: #89E448;
+  background-size: cover;
+  cursor: pointer;
+}
+
+#reset-button {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  font-size: 21px;
+  line-height: 55px;
+  margin: 1%;
+  text-align: center;
+  width: 456px;
+}
+
+#reset-button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.text-and-buttons {
+  float: left;
+  width: 15%
+}
+
+#container-wrap {
+  margin-left: 15%;
+  font-size: 21px;
+}
+
+.drop-button {
+  font-size: 33px;
+}
