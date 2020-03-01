@@ -216,19 +216,19 @@ function takeTurn(e) {
   keepScore(win);
 }
 
-function keepScore(win) {
-  if (win !== null) {
-    if (win === "red") {
-      redscore++;
-      redscore.textContent = "red: " + redscore;
-
-    } else if (win === "yellow") {
-      yellowscore++;
-      yellowscore.textContent = "yellow: " + yellowscore;
-
-    }
-  }
-}
+// function keepScore(win) {
+//   if (win !== null) {
+//     if (win === "red") {
+//       redscore++;
+//       redscore.textContent = "red: " + redscore;
+//
+//     } else if (win === "yellow") {
+//       yellowscore++;
+//       yellowscore.textContent = "yellow: " + yellowscore;
+//
+//     }
+//   }
+// }
 
 function redFirst() {
     turn === "red";
@@ -244,7 +244,7 @@ function yellowFirst() {
   render();
 }
 
-function takeTurn1(e) {
+function takeTurn1() {
   if (!win) {
     if (board[35] === "") {
       board[35] = "\u2022";
@@ -289,7 +289,7 @@ function takeTurn3() {
     } else if (board[30] === "") {
       board[30] = "\u2022";
     } else if (board[23] === "") {
-      board[24] = "\u2022";
+      board[23] = "\u2022";
     } else if (board[16] === "") {
       board[16] = "\u2022";
     } else if (board[9] === "") {
@@ -304,120 +304,75 @@ function takeTurn3() {
 function takeTurn4() {
   if (!win) {
     if (board[38] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[38] = "\u2022";
     } else if (board[31] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[31] = "\u2022";
     } else if (board[24] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[24] = "\u2022";
     } else if (board[17] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[17] = "\u2022";
     } else if (board[10] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[10] = "\u2022";
     } else if (board[3] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[3] = "\u2022";
     }
   }
+  render();
 }
 
 function takeTurn5() {
   if (!win) {
     if (board[39] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[39] = "\u2022";
     } else if (board[32] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[32] = "\u2022";
     } else if (board[25] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[25] = "\u2022";
     } else if (board[18] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[18] = "\u2022";
     } else if (board[11] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[11] = "\u2022";
     } else if (board[4] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[4] = "\u2022";
     }
-    render();
   }
+  render();
 }
 
 function takeTurn6() {
   if (!win) {
     if (board[40] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[40] = "\u2022";
     } else if (board[33] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[33] = "\u2022";
     } else if (board[26] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[26] = "\u2022";
     } else if (board[19] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[19] = "\u2022";
     } else if (board[12] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[12] = "\u2022";
     } else if (board[5] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[5] = "\u2022";
     }
   }
+  render();
 }
 
 function takeTurn7() {
   if (!win) {
     if (board[41] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[41] = "\u2022";
     } else if (board[34] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[34] = "\u2022";
     } else if (board[27] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[27] = "\u2022";
     } else if (board[20] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[20] = "\u2022";
     } else if (board[13] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[13] = "\u2022";
     } else if (board[6] === "") {
-      let index = squares.findIndex(function(square) {
-        return square === e.target;
-      });
+      board[6] = "\u2022";
     }
   }
+  render();
 }
