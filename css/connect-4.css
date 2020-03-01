@@ -55,7 +55,8 @@ h2 {
 }
 
 .square:hover {
-  background-image: url("../images/reddisc.jpg");
+  /* background-image: url("../images/reddisc.jpg"); */
+  background-color: #89E448;
   background-size: cover;
   cursor: pointer;
 }
