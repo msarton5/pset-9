@@ -275,7 +275,33 @@ function takeTurn1(e) {
 }
 
 function takeTurn2() {
-
+  if (!win) {
+    if (board[36] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[29] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[22] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[15] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[8] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[1] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    }
+  }
 }
 
 function takeTurn3() {
