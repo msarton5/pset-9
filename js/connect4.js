@@ -98,16 +98,6 @@ const winningConditions = [
 
 ///////////////////// APP STATE (VARIABLES) /////////////////////////
 
-// let columns = [
-//   [null, null, null, null, null, null],
-//   [null, null, null, null, null, null],
-//   [null, null, null, null, null, null],
-//   [null, null, null, null, null, null],
-//   [null, null, null, null, null, null],
-//   [null, null, null, null, null, null],
-//   [null, null, null, null, null, null]
-// ]
-
 let board;
 let turn = "red";
 let win;
@@ -120,7 +110,7 @@ const message = document.querySelector("h2");
 
 ///////////////////// EVENT LISTENERS ///////////////////////////////
 window.onload = init;
-document.getElementById("board").onclick = takeTurn;
+// document.getElementById("board").onclick = takeTurn;
 // document.getElementById("reset-button").onclick = init;
 document.getElementById("button1").onclick = takeTurn1;
 document.getElementById("button2").onclick = takeTurn2;
@@ -260,8 +250,13 @@ function takeTurn1() {
       board[0] = "\u2022";
     }
   }
-  render();
-}
+
+    turn = turn === "red" ? "yellow" : "red";
+    win = getWinner();
+
+    render();
+  }
+
 
 function takeTurn2() {
   if (!win) {
@@ -279,6 +274,9 @@ function takeTurn2() {
       board[1] = "\u2022";
     }
   }
+  turn = turn === "red" ? "yellow" : "red";
+  win = getWinner();
+
   render();
 }
 
@@ -298,6 +296,9 @@ function takeTurn3() {
       board[2] = "\u2022";
     }
   }
+  turn = turn === "red" ? "yellow" : "red";
+  win = getWinner();
+
   render();
 }
 
@@ -317,6 +318,9 @@ function takeTurn4() {
       board[3] = "\u2022";
     }
   }
+  turn = turn === "red" ? "yellow" : "red";
+  win = getWinner();
+
   render();
 }
 
@@ -336,6 +340,9 @@ function takeTurn5() {
       board[4] = "\u2022";
     }
   }
+  turn = turn === "red" ? "yellow" : "red";
+  win = getWinner();
+
   render();
 }
 
@@ -355,6 +362,9 @@ function takeTurn6() {
       board[5] = "\u2022";
     }
   }
+  turn = turn === "red" ? "yellow" : "red";
+  win = getWinner();
+
   render();
 }
 
@@ -374,5 +384,8 @@ function takeTurn7() {
       board[6] = "\u2022";
     }
   }
+  turn = turn === "red" ? "yellow" : "red";
+  win = getWinner();
+
   render();
 }
