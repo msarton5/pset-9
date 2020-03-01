@@ -40,7 +40,7 @@ h2 {
 .wrap {
   flex-wrap: wrap;
   height: 456px;
-  width: 800px;
+  width: 456px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -48,10 +48,10 @@ h2 {
 .square {
   border: 1px solid rgba(0, 0, 0, 0.75);
   font-size: 30px;
-  height: 100px;
-  line-height: 150px;
+  height: 55px;
+  line-height: 50px;
   user-select: none;
-  width: 100px;
+  width: 55px;
 }
 
 .square:hover {
