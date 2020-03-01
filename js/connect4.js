@@ -98,15 +98,15 @@ const winningConditions = [
 
 ///////////////////// APP STATE (VARIABLES) /////////////////////////
 
-// let columns = [
-//   [null, null, null, null, null, null],
-//   [null, null, null, null, null, null],
-//   [null, null, null, null, null, null],
-//   [null, null, null, null, null, null],
-//   [null, null, null, null, null, null],
-//   [null, null, null, null, null, null],
-//   [null, null, null, null, null, null]
-// ]
+let columns = [
+  [null, null, null, null, null, null],
+  [null, null, null, null, null, null],
+  [null, null, null, null, null, null],
+  [null, null, null, null, null, null],
+  [null, null, null, null, null, null],
+  [null, null, null, null, null, null],
+  [null, null, null, null, null, null]
+]
 
 let board;
 let turn = "red";
@@ -122,13 +122,13 @@ const message = document.querySelector("h2");
 window.onload = init;
 document.getElementById("board").onclick = takeTurn;
 // document.getElementById("reset-button").onclick = init;
-document.getElementById("button1").onclick = takeTurn;
-document.getElementById("button2").onclick = takeTurn;
-document.getElementById("button3").onclick = takeTurn;
-document.getElementById("button4").onclick = takeTurn;
-document.getElementById("button5").onclick = takeTurn;
-document.getElementById("button6").onclick = takeTurn;
-document.getElementById("button7").onclick = takeTurn;
+document.getElementById("button1").onclick = takeTurn1;
+document.getElementById("button2").onclick = takeTurn2;
+document.getElementById("button3").onclick = takeTurn3;
+document.getElementById("button4").onclick = takeTurn4;
+document.getElementById("button5").onclick = takeTurn5;
+document.getElementById("button6").onclick = takeTurn6;
+document.getElementById("button7").onclick = takeTurn7;
 
 ///////////////////// FUNCTIONS /////////////////////////////////////
 function init() {
@@ -189,7 +189,7 @@ function getWinner() {
       board[condition[0]] &&
       board[condition[0]] === board[condition[1]] &&
       board[condition[1]] === board[condition[2]] &&
-      board[condition[2]] === board[condition[3]] 
+      board[condition[2]] === board[condition[3]]
     ) {
       winner = board[condition[0]];
     }
@@ -200,7 +200,6 @@ function getWinner() {
 
 function takeTurn(e) {
   if (!win) {
-    console.log("turn");
     let index = squares.findIndex(function(square) {
       return square === e.target;
     });
@@ -243,4 +242,58 @@ function yellowFirst() {
   document.getElementById("red-button").style.visibility = "invisible";
   document.getElementById("yellow-button").style.visibility = "invisible";
   render();
+}
+
+function takeTurn1(e) {
+  if (!win) {
+    if (board[35] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[28] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[21] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[14] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[7] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[0] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    }
+  }
+}
+
+function takeTurn2() {
+
+}
+
+function takeTurn3() {
+
+}
+
+function takeTurn4() {
+
+}
+
+function takeTurn5() {
+
+}
+
+function takeTurn6() {
+
+}
+
+function takeTurn7() {
+
 }
