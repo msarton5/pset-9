@@ -305,11 +305,63 @@ function takeTurn2() {
 }
 
 function takeTurn3() {
-
+  if (!win) {
+    if (board[37] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[30] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[23] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[16] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[9] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[2] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    }
+  }
 }
 
 function takeTurn4() {
-
+  if (!win) {
+    if (board[38] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[31] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[24] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[17] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[10] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    } else if (board[3] === "") {
+      let index = squares.findIndex(function(square) {
+        return square === e.target;
+      });
+    }
+  }
 }
 
 function takeTurn5() {
