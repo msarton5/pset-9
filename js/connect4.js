@@ -188,23 +188,23 @@ function getWinner() {
   return winner;
 }
 
-function takeTurn(e) {
-  if (!win) {
-    let index = squares.findIndex(function(square) {
-      return square === e.target;
-    });
-
-    if (board[index] === "") {
-      board[index] = turn;
-      turn = turn === "red" ? "yellow" : "red";
-      win = getWinner();
-
-      render();
-    }
-  }
-  win = getWinner();
-  keepScore(win);
-}
+// function takeTurn(e) {
+//   if (!win) {
+//     let index = squares.findIndex(function(square) {
+//       return square === e.target;
+//     });
+//
+//     if (board[index] === "") {
+//       board[index] = turn;
+//       turn = turn === "red" ? "yellow" : "red";
+//       win = getWinner();
+//
+//       render();
+//     }
+//   }
+//   win = getWinner();
+//   keepScore(win);
+// }
 
 // function keepScore(win) {
 //   if (win !== null) {
