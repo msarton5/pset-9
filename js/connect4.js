@@ -221,37 +221,47 @@ function getWinner() {
 //   }
 // }
 
-function redFirst() {
-    turn === "red";
-    document.getElementById("red-button").style.visibility = "invisible";
-    document.getElementById("yellow-button").style.visibility = "invisible";
-    render();
-}
-
-function yellowFirst() {
-  turn === "yellow";
-  document.getElementById("red-button").style.visibility = "invisible";
-  document.getElementById("yellow-button").style.visibility = "invisible";
-  render();
-}
 
 function takeTurn1() {
   if (!win) {
     if (board[35] === "") {
-      board[35] = "\u2022";
+      if (turn === "red") {
+        board[35] = "\u2022";
+      } else if (turn === "yellow") {
+        board[35] = "\u2219";
+      }
     } else if (board[28] === "") {
-      board[28] = "\u2022";
+      if (turn === "red") {
+        board[28] = "\u2022";
+      } else if (turn === "yellow") {
+        board[28] = "\u2219";
+      }
     } else if (board[21] === "") {
-      board[21] = "\u2022";
+      if (turn === "red") {
+        board[21] = "\u2022";
+      } else if (turn === "yellow") {
+        board[21] = "\u2219";
+      }
     } else if (board[14] === "") {
-      board[14] = "\u2022";
+      if (turn === "red") {
+        board[14] = "\u2022";
+      } else if (turn === "yellow") {
+        board[14] = "\u2219";
+      }
     } else if (board[7] === "") {
-      board[7] = "\u2022";
+      if (turn === "red") {
+        board[7] = "\u2022";
+      } else if (turn === "yellow") {
+        board[7] = "\u2219";
+      }
     } else if (board[0] === "") {
-      board[0] = "\u2022";
+      if (turn === "red") {
+        board[0] = "\u2022";
+      } else if (turn === "yellow") {
+        board[0] = "\u2219";
+      }
     }
   }
-
     turn = turn === "red" ? "yellow" : "red";
     win = getWinner();
 
@@ -262,17 +272,41 @@ function takeTurn1() {
 function takeTurn2() {
   if (!win) {
     if (board[36] === "") {
-      board[36] = "\u2022";
+      if (turn === "red") {
+        board[36] = "\u2022";
+      } else if (turn === "yellow") {
+        board[36] = "\u2219";
+      }
     } else if (board[29] === "") {
-      board[29] = "\u2022";
+      if (turn === "red") {
+        board[29] = "\u2022";
+      } else if (turn === "yellow") {
+        board[29] = "\u2219";
+      }
     } else if (board[22] === "") {
-      board[22] = "\u2022";
+      if (turn === "red") {
+        board[22] = "\u2022";
+      } else if (turn === "yellow") {
+        board[22] = "\u2219";
+      }
     } else if (board[15] === "") {
-      board[15] = "\u2022";
+      if (turn === "red") {
+        board[15] = "\u2022";
+      } else if (turn === "yellow") {
+        board[15] = "\u2219";
+      }
     } else if (board[8] === "") {
-      board[8] = "\u2022";
+      if (turn === "red") {
+        board[8] = "\u2022";
+      } else if (turn === "yellow") {
+        board[8] = "\u2219";
+      }
     } else if (board[1] === "") {
-      board[1] = "\u2022";
+      if (turn === "red") {
+        board[1] = "\u2022";
+      } else if (turn === "yellow") {
+        board[1] = "\u2219";
+      }
     }
   }
   turn = turn === "red" ? "yellow" : "red";
@@ -284,17 +318,41 @@ function takeTurn2() {
 function takeTurn3() {
   if (!win) {
     if (board[37] === "") {
-      board[37] = "\u2022";
+      if (turn === "red") {
+        board[37] = "\u2022";
+      } else if (turn === "yellow") {
+        board[37] = "\u2219";
+      }
     } else if (board[30] === "") {
-      board[30] = "\u2022";
+      if (turn === "red") {
+        board[30] = "\u2022";
+      } else if (turn === "yellow") {
+        board[30] = "\u2219";
+      }
     } else if (board[23] === "") {
-      board[23] = "\u2022";
+      if (turn === "red") {
+        board[23] = "\u2022";
+      } else if (turn === "yellow") {
+        board[23] = "\u2219";
+      }
     } else if (board[16] === "") {
-      board[16] = "\u2022";
+      if (turn === "red") {
+        board[16] = "\u2022";
+      } else if (turn === "yellow") {
+        board[16] = "\u2219";
+      }
     } else if (board[9] === "") {
-      board[9] = "\u2022";
+      if (turn === "red") {
+        board[9] = "\u2022";
+      } else if (turn === "yellow") {
+        board[9] = "\u2219";
+      }
     } else if (board[2] === "") {
-      board[2] = "\u2022";
+      if (turn === "red") {
+        board[2] = "\u2022";
+      } else if (turn === "yellow") {
+        board[2] = "\u2219";
+      }
     }
   }
   turn = turn === "red" ? "yellow" : "red";
@@ -306,17 +364,41 @@ function takeTurn3() {
 function takeTurn4() {
   if (!win) {
     if (board[38] === "") {
-      board[38] = "\u2022";
+      if (turn === "red") {
+        board[38] = "\u2022";
+      } else if (turn === "yellow") {
+        board[38] = "\u2219";
+      }
     } else if (board[31] === "") {
-      board[31] = "\u2022";
+      if (turn === "red") {
+        board[31] = "\u2022";
+      } else if (turn === "yellow") {
+        board[31] = "\u2219";
+      }
     } else if (board[24] === "") {
-      board[24] = "\u2022";
+      if (turn === "red") {
+        board[24] = "\u2022";
+      } else if (turn === "yellow") {
+        board[24] = "\u2219";
+      }
     } else if (board[17] === "") {
-      board[17] = "\u2022";
+      if (turn === "red") {
+        board[17] = "\u2022";
+      } else if (turn === "yellow") {
+        board[17] = "\u2219";
+      }
     } else if (board[10] === "") {
-      board[10] = "\u2022";
+      if (turn === "red") {
+        board[10] = "\u2022";
+      } else if (turn === "yellow") {
+        board[36] = "\u2219";
+      }
     } else if (board[3] === "") {
-      board[3] = "\u2022";
+      if (turn === "red") {
+        board[3] = "\u2022";
+      } else if (turn === "yellow") {
+        board[3] = "\u2219";
+      }
     }
   }
   turn = turn === "red" ? "yellow" : "red";
@@ -328,17 +410,41 @@ function takeTurn4() {
 function takeTurn5() {
   if (!win) {
     if (board[39] === "") {
-      board[39] = "\u2022";
+      if (turn === "red") {
+        board[39] = "\u2022";
+      } else if (turn === "yellow") {
+        board[39] = "\u2219";
+      }
     } else if (board[32] === "") {
-      board[32] = "\u2022";
+      if (turn === "red") {
+        board[32] = "\u2022";
+      } else if (turn === "yellow") {
+        board[32] = "\u2219";
+      }
     } else if (board[25] === "") {
-      board[25] = "\u2022";
+      if (turn === "red") {
+        board[25] = "\u2022";
+      } else if (turn === "yellow") {
+        board[25] = "\u2219";
+      }
     } else if (board[18] === "") {
-      board[18] = "\u2022";
+      if (turn === "red") {
+        board[18] = "\u2022";
+      } else if (turn === "yellow") {
+        board[18] = "\u2219";
+      }
     } else if (board[11] === "") {
-      board[11] = "\u2022";
+      if (turn === "red") {
+        board[11] = "\u2022";
+      } else if (turn === "yellow") {
+        board[11] = "\u2219";
+      }
     } else if (board[4] === "") {
-      board[4] = "\u2022";
+      if (turn === "red") {
+        board[4] = "\u2022";
+      } else if (turn === "yellow") {
+        board[4] = "\u2219";
+      }
     }
   }
   turn = turn === "red" ? "yellow" : "red";
@@ -350,17 +456,41 @@ function takeTurn5() {
 function takeTurn6() {
   if (!win) {
     if (board[40] === "") {
-      board[40] = "\u2022";
+      if (turn === "red") {
+        board[40] = "\u2022";
+      } else if (turn === "yellow") {
+        board[40] = "\u2219";
+      }
     } else if (board[33] === "") {
-      board[33] = "\u2022";
+      if (turn === "red") {
+        board[33] = "\u2022";
+      } else if (turn === "yellow") {
+        board[33] = "\u2219";
+      }
     } else if (board[26] === "") {
-      board[26] = "\u2022";
+      if (turn === "red") {
+        board[26] = "\u2022";
+      } else if (turn === "yellow") {
+        board[26] = "\u2219";
+      }
     } else if (board[19] === "") {
-      board[19] = "\u2022";
+      if (turn === "red") {
+        board[19] = "\u2022";
+      } else if (turn === "yellow") {
+        board[19] = "\u2219";
+      }
     } else if (board[12] === "") {
-      board[12] = "\u2022";
+      if (turn === "red") {
+        board[12] = "\u2022";
+      } else if (turn === "yellow") {
+        board[12] = "\u2219";
+      }
     } else if (board[5] === "") {
-      board[5] = "\u2022";
+      if (turn === "red") {
+        board[5] = "\u2022";
+      } else if (turn === "yellow") {
+        board[5] = "\u2219";
+      }
     }
   }
   turn = turn === "red" ? "yellow" : "red";
@@ -372,17 +502,41 @@ function takeTurn6() {
 function takeTurn7() {
   if (!win) {
     if (board[41] === "") {
-      board[41] = "\u2022";
+      if (turn === "red") {
+        board[41] = "\u2022";
+      } else if (turn === "yellow") {
+        board[41] = "\u2219";
+      }
     } else if (board[34] === "") {
-      board[34] = "\u2022";
+      if (turn === "red") {
+        board[34] = "\u2022";
+      } else if (turn === "yellow") {
+        board[34] = "\u2219";
+      }
     } else if (board[27] === "") {
-      board[27] = "\u2022";
+      if (turn === "red") {
+        board[27] = "\u2022";
+      } else if (turn === "yellow") {
+        board[27] = "\u2219";
+      }
     } else if (board[20] === "") {
-      board[20] = "\u2022";
+      if (turn === "red") {
+        board[20] = "\u2022";
+      } else if (turn === "yellow") {
+        board[20] = "\u2219";
+      }
     } else if (board[13] === "") {
-      board[13] = "\u2022";
+      if (turn === "red") {
+        board[13] = "\u2022";
+      } else if (turn === "yellow") {
+        board[13] = "\u2219";
+      }
     } else if (board[6] === "") {
-      board[6] = "\u2022";
+      if (turn === "red") {
+        board[6] = "\u2022";
+      } else if (turn === "yellow") {
+        board[6] = "\u2219";
+      }
     }
   }
   turn = turn === "red" ? "yellow" : "red";
