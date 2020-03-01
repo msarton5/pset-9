@@ -47,21 +47,23 @@ h2 {
 
 .square {
   border: 1px solid rgba(0, 0, 0, 0.75);
-  font-size: 30px;
+  font-size: 100px;
   height: 55px;
   line-height: 50px;
   user-select: none;
   width: 55px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .a1 {
 
-  background-color: black;
+  background-color: white;
 }
 
 .a2 {
 
-  background-color: white;
+  background-color: black;
 }
 
 .square:hover {
