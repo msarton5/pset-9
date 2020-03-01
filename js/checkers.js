@@ -25,7 +25,7 @@ function takeTurn(e) {
 
     if (board[index] === "") {
       board[index] = turn;
-      turn = turn === "X" ? "O" : "X";
+      turn = turn === "black" ? "red" : "black";
       win = getWinner();
 
       render();
@@ -42,4 +42,20 @@ function render() {
 
   message.textContent =
     win === "T" ? "It's a tie!" : win ? `${win} wins!` : `Turn: ${turn}`;
+}
+
+function getWinner() {
+  let winner = null;
+
+  winningConditions.forEach(function(condition, index) {
+    if (
+      board[condition[0]] &&
+      board[condition[0]] === board[condition[1]] &&
+      board[conition[1]] === board[condition[2]]
+    ) {
+      winner = board[condition[0]];
+    }
+  });
+
+  return winner;
 }
