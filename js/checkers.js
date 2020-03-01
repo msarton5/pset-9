@@ -1,3 +1,6 @@
+redCheckers = [];
+
+
 window.onload = function() {
   document.getElementById("board").onclick = takeTurn;
 }
@@ -53,7 +56,18 @@ function init() {
     console.log(board);
   turn = "red";
   win = null;
-
+  redCheckers[redCheckers.length] = document.getElementById("42")
+  redCheckers[redCheckers.length] = document.getElementById("44")
+  redCheckers[redCheckers.length] = document.getElementById("46")
+  redCheckers[redCheckers.length] = document.getElementById("48")
+  redCheckers[redCheckers.length] = document.getElementById("49")
+  redCheckers[redCheckers.length] = document.getElementById("51")
+  redCheckers[redCheckers.length] = document.getElementById("53")
+  redCheckers[redCheckers.length] = document.getElementById("55")
+  redCheckers[redCheckers.length] = document.getElementById("58")
+  redCheckers[redCheckers.length] = document.getElementById("60")
+  redCheckers[redCheckers.length] = document.getElementById("62")
+  redCheckers[redCheckers.length] = document.getElementById("64")
   render();
 }
 
@@ -79,6 +93,14 @@ function render() {
   board.forEach(function(mark, index) {
     squares[index].textContent = mark;
   });
+
+  for (var i = 0; i < board.length; i++) {
+    squares[i].style.color = "black";
+  }
+
+  for (var i = 0; i < redCheckers.length; i++) {
+    squares[redCheckers[i].id - 1].style.color = "red";
+  }
 
   message.textContent =
     win === "T" ? "It's a tie!" : win ? `${win} wins!` : `Turn: ${turn}`;
