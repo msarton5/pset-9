@@ -54,6 +54,16 @@ h2 {
   width: 55px;
 }
 
+.a1 {
+
+  background-color: black;
+}
+
+.a2 {
+
+  background-color: white;
+}
+
 .square:hover {
   /* background-image: url("../images/reddisc.jpg"); */
   background-color: #89E448;

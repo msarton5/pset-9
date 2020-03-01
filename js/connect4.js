@@ -98,15 +98,15 @@ const winningConditions = [
 
 ///////////////////// APP STATE (VARIABLES) /////////////////////////
 
-let columns = [
-  [null, null, null, null, null, null],
-  [null, null, null, null, null, null],
-  [null, null, null, null, null, null],
-  [null, null, null, null, null, null],
-  [null, null, null, null, null, null],
-  [null, null, null, null, null, null],
-  [null, null, null, null, null, null]
-]
+// let columns = [
+//   [null, null, null, null, null, null],
+//   [null, null, null, null, null, null],
+//   [null, null, null, null, null, null],
+//   [null, null, null, null, null, null],
+//   [null, null, null, null, null, null],
+//   [null, null, null, null, null, null],
+//   [null, null, null, null, null, null]
+// ]
 
 let board;
 let turn = "red";
