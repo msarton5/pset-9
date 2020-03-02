@@ -141,86 +141,48 @@ function render() {
     squares[index].textContent = mark;
   });
 
+  // if (turn === "red") {
+  //   document.getElementsByClassName("square").style.color = "red";
+  // } else if (turn === "yellow") {
+  //   document.getElementsByClassName("square").style.color = "yellow";
+  // }
+
+  for (var i = 0; i < board.length; i++) {
+    if (board[i] == "\u2022") {
+      squares[i].style.color = "red";
+    } else if (board[i] == "\u2219"){
+
+      squares[i].style.color = "yellow";
+      squares[i].style.fontSize = "350px";
+    }
+  }
+
   message.textContent =
     win === "T" ? "It's a tie!" : win ? `${win} wins!` : `Turn: ${turn}`;
 }
 
-// function render() {
-//   board.forEach(function(mark, index) {
-//     console.log(turn);
-//     document.getElementsByClassName("square") = box;
-//     console.log(box);
-//     if (turn === "red") {
-//       box.style.backgroundColor = "red";
-//     } else {
-//       box.style.backgroundColor = "yellow";
-//     }
-//
-//
-//     // const canvas = document.getElementById("board[index]");
-//     // const ctx = canvas.getContext("2d");
-//     //
-//     // if (turn === "red") {
-//     //     ctx.beginPath();
-//     //     ctx.arc(20*index%7, 20*((index/6)-index%6), 15, 0, 2 * Math.PI);
-//     //     ctx.fill();
-//     // }
-//
-//   });
-//   message.textContent =
-//     win === "T" ? "It's a tie!" : win ? `${win} wins!` : `Turn: ${turn}`;
-// }
 
 function getWinner() {
   let winner = null;
 
   winningConditions.forEach(function(condition, index) {
-    console.log(condition);
+
     if (
       board[condition[0]] &&
       board[condition[0]] === board[condition[1]] &&
       board[condition[1]] === board[condition[2]] &&
       board[condition[2]] === board[condition[3]]
     ) {
-      winner = board[condition[0]];
+      if (board[condition[0]] == "\u2022") {
+        winner = "red";
+      } else {
+        winner = "yellow";
+      }
     }
   });
 
   return winner;
 }
-
-// function takeTurn(e) {
-//   if (!win) {
-//     let index = squares.findIndex(function(square) {
-//       return square === e.target;
-//     });
-//
-//     if (board[index] === "") {
-//       board[index] = turn;
-//       turn = turn === "red" ? "yellow" : "red";
-//       win = getWinner();
-//
-//       render();
-//     }
-//   }
-//   win = getWinner();
-//   keepScore(win);
-// }
-
-// function keepScore(win) {
-//   if (win !== null) {
-//     if (win === "red") {
-//       redscore++;
-//       redscore.textContent = "red: " + redscore;
-//
-//     } else if (win === "yellow") {
-//       yellowscore++;
-//       yellowscore.textContent = "yellow: " + yellowscore;
-//
-//     }
-//   }
-// }
-
 
 function takeTurn1() {
   if (!win) {

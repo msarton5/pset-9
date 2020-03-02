@@ -41,19 +41,17 @@ h2 {
   flex-wrap: wrap;
   height: 456px;
   width: 800px;
-  text-align: center;
   margin: 0 auto;
+
 }
 
 .square {
   border: 1px solid rgba(0, 0, 0, 0.75);
   font-size: 200px;
   height: 100px;
-  line-height: 150px;
+  line-height: 75px;
   user-select: none;
   width: 100px;
-  display: inline-block;
- fon
 }
 
 .square:hover {
@@ -86,7 +84,7 @@ h2 {
 }
 
 #container-wrap {
-  margin-left: 15%;
+  /* margin-left: 15%; */
   font-size: 21px;
 }
 
